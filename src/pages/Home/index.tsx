@@ -7,6 +7,8 @@ import { Card } from "../../components/Card";
 import { nationalTravelsData } from "../../utils/datas/nationalTravels";
 import { cards } from "../../utils/datas/card";
 import { ExperienceGallery } from "../../utils/datas/experienceGallery";
+import { AdvantagesData } from "../../utils/datas/advantages";
+import { Advantages } from "../../components/Advantages";
 import "./styles.scss";
 
 export const Home: React.FC = () => {
@@ -42,10 +44,16 @@ export const Home: React.FC = () => {
             <h3>Nosso mural de Experiências</h3>
           </div>
           <div className="cards">
-            {ExperienceGallery.map((item) => (
-              <img src={item.image} alt={item.alt} />
+            {ExperienceGallery.map((photo) => (
+              <img src={photo.image} alt={photo.alt} />
             ))}
           </div>
+        </section>
+
+        <section className="section-4">
+          {AdvantagesData.map((advantage) => (
+            <Advantages {...advantage} />
+          ))}
         </section>
       </div>
     </>

@@ -67,6 +67,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
+    width: 100%;
 
     > img {
       width: 100%;
@@ -82,5 +83,21 @@
         object-fit: cover;
       }
     }
+  }
+}
+
+.section-4 {
+  width: 100%;
+  max-width: #{map-get($breakpoints, "medium")};
+  padding: 48px 12px 0 12px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  place-items: center;
+  gap: 20px;
+
+  > div:nth-child(2n) {
+    background-color: $primary-color;
+    color: $white-color;
   }
 }

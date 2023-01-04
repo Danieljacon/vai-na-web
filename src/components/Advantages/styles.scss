@@ -1,0 +1,15 @@
+.advantages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+  min-height: 165px;
+  color: $primary-color;
+  font-weight: 600;
+  background-color: $grey-50-color;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.125rem;
+}
