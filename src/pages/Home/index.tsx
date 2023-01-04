@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../../components/Button";
-import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { NationalTravel } from "../../components/NationalTravel";
 import { Card } from "../../components/Card";
@@ -9,17 +8,11 @@ import { cards } from "../../utils/datas/card";
 import { ExperienceGallery } from "../../utils/datas/experienceGallery";
 import { AdvantagesData } from "../../utils/datas/advantages";
 import { Advantages } from "../../components/Advantages";
-
-import Logo from "../../assets/icons/logo-blue.png";
-
 import "./styles.scss";
-import { footerItems } from "../../utils/datas/footer";
-import { Footer } from "../../components/Footer";
 
 export const Home: React.FC = () => {
   return (
     <>
-      <Header />
       <div className="container">
         <main className="main-section">
           <div className="container-content">
@@ -74,7 +67,6 @@ export const Home: React.FC = () => {
             />
           </form>
         </section>
-        <Footer />
       </div>
     </>
   );

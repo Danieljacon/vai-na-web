@@ -1,5 +1,6 @@
 .main-section {
   @include center-image("../../assets/images/main-section-bg.png");
+  padding-top: 53px;
 
   > div > div {
     max-width: 350px;

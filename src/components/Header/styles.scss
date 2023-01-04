@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   background-color: $white-color;
+  position: fixed;
+  z-index: 9999;
 
   .container-content {
     @include center-content;
@@ -11,9 +13,14 @@
       flex-direction: column;
     }
 
-    > img {
-      width: 100%;
-      max-width: 130px;
+    > .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      > img {
+        width: 100%;
+        max-width: 130px;
+      }
     }
 
     > ul {
@@ -25,5 +32,13 @@
         flex-direction: column;
       }
     }
+  }
+}
+
+.menu-button {
+  display: none;
+  @include tablet {
+    display: block;
+    cursor: pointer;
   }
 }
