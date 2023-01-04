@@ -1,15 +1,7 @@
 import React from "react";
 import { Button } from "../Button";
 import "./styles.scss";
-
-interface NationalTravelProps {
-  title: string;
-  description: React.ReactNode;
-  alt: string;
-  image: any;
-  colorScheme: "primary" | "color-white";
-  position?: "normal" | "reverse";
-}
+import { NationalTravelProps } from "./types";
 
 export const NationalTravel: React.FC<NationalTravelProps> = ({
   title,

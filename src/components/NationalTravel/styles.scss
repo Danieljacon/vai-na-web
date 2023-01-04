@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-height: 327px;
+  overflow: hidden;
 
   @include tablet {
     grid-template-columns: 1fr;

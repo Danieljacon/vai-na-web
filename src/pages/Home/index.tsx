@@ -3,11 +3,13 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { NationalTravel } from "../../components/NationalTravel";
-import camingoBg from "../../assets/images/caminho-bg.png";
-import montanhaBg from "../../assets/images/montanha-bg.png";
+import { Card } from "../../components/Card";
+import { nationalTravelsData } from "../../utils/datas/nationalTravels";
+import { cards } from "../../utils/datas/card";
+import { ExperienceGallery } from "../../utils/datas/experienceGallery";
 import "./styles.scss";
 
-export const Home = () => {
+export const Home: React.FC = () => {
   return (
     <>
       <Header />
@@ -22,29 +24,28 @@ export const Home = () => {
           </div>
         </main>
 
-        <section>
-          <NationalTravel
-            image={camingoBg}
-            alt="Um homem e uma mulher sentados ao topo de um prédio"
-            title="O clima perfeito, no lugar perfeito"
-            description="Planeje sua viagem com a sua paquera, compartilhar momentos preciosos juntos não tem preço."
-            colorScheme="primary"
-          />
-          <NationalTravel
-            image={montanhaBg}
-            alt="Quatro amigos em uma montanha conversando"
-            title="Curta uma nova vibe entre amigos"
-            description="Rachando a conta ou rachando o bico, a melhor hora pra curtir é entre amigos. Conheça nossos Planos Multi.."
-            colorScheme="color-white"
-            position="reverse"
-          />
-          <NationalTravel
-            image={camingoBg}
-            alt="Várias pessoas no meio da água formando um círculo"
-            title="Algumas experiências são inexplicáveis"
-            description="Conheça as fontes termais de Caldas Novas, Goiás. Águas quentes, num clima sereno, relaxante e natural."
-            colorScheme="primary"
-          />
+        <section className="section-1">
+          {nationalTravelsData.map((travel) => (
+            <NationalTravel {...travel} />
+          ))}
+        </section>
+
+        <section className="section-2">
+          {cards.map((card) => (
+            <Card {...card} />
+          ))}
+        </section>
+
+        <section className="section-3">
+          <div>
+            <p>use a hashtag #brasilisverigudi</p>
+            <h3>Nosso mural de Experiências</h3>
+          </div>
+          <div className="cards">
+            {ExperienceGallery.map((item) => (
+              <img src={item.image} alt={item.alt} />
+            ))}
+          </div>
         </section>
       </div>
     </>
