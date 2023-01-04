@@ -18,7 +18,6 @@ export const Header: React.FC = () => {
   ];
 
   useEffect(() => {
-    // if showMenu is true, disable scroll and add a div with class "overlay" to the body
     if (showMenu) {
       document.body.style.overflow = "hidden";
     } else {
