@@ -5,7 +5,8 @@
   font-weight: 600;
   border-radius: 15px;
   cursor: pointer;
-  font-size: .75rem;
+  font-size: 0.75rem;
+  width: fit-content;
 
   &-contained {
     background-color: $primary-color;
@@ -18,6 +19,18 @@
     &:hover {
       background-color: $secondary-color;
       border-color: $secondary-color;
+    }
+
+    &.color-white {
+      background-color: $white-color;
+      border-color: $white-color;
+      color: $primary-color;
+
+      &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white-color;
+      }
     }
   }
 
@@ -33,6 +46,17 @@
       background-color: $primary-color;
       color: $white-color;
     }
+
+    &.color-white {
+      background-color: transparent;
+      color: $white-color;
+      border: 1px solid $white-color;
+
+      &:hover {
+        background-color: $white-color;
+        color: $primary-color;
+      }
+    }
   }
 
   &-text {
@@ -42,6 +66,16 @@
     &:hover {
       background-color: $primary-color;
       color: $white-color;
+    }
+
+    &.color-white {
+      background-color: transparent;
+      color: $white-color;
+
+      &:hover {
+        background-color: $white-color;
+        color: $primary-color;
+      }
     }
   }
 }

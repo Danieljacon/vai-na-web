@@ -6,12 +6,13 @@ export const Button: React.FC<ButtonProps> = ({
   text,
   variant = "text",
   className,
+  colorScheme = "primary",
   onClick,
 }) => {
   return (
     <input
       type="button"
-      className={`btn btn-${variant} ${className}`}
+      className={`btn btn-${variant} ${className} ${colorScheme}`}
       value={text}
       onClick={onClick}
     />

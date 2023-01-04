@@ -1,11 +1,7 @@
 .main-section {
-  // background-color: red;
-  background-image: url("../../assets/images/main-section-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include center-image("../../assets/images/main-section-bg.png");
 
-  > div {
+  > div > div {
     max-width: 350px;
     min-height: 368px;
     display: flex;

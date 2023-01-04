@@ -3,4 +3,5 @@ export interface ButtonProps {
   variant?: "text" | "outlined" | "contained";
   onClick?: () => void;
   className?: string;
+  colorScheme?: "primary" | "color-white";
 }
