@@ -28,23 +28,7 @@
     }
 
     input[type="text"] {
-      width: 100%;
       max-width: 249px;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-
-      &::placeholder {
-        font-size: 12px;
-      }
-
-      &:focus {
-        outline: 2px solid $primary-color;
-      }
-
-      @include tablet {
-        max-width: 100%;
-      }
     }
   }
 }
