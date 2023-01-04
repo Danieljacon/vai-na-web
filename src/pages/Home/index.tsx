@@ -55,6 +55,16 @@ export const Home: React.FC = () => {
             <Advantages {...advantage} />
           ))}
         </section>
+
+        <section className="section-5">
+          <h3>Fale conosco</h3>
+          <form>
+            <Input type="text" placeholder="Qual o seu melhor email" />
+            <Input type="text" placeholder="Assunto" />
+            <Input type="text" placeholder="Mensagem" textArea />
+            <Button text="Enviar" variant="outlined" colorScheme="color-white" />
+          </form>
+        </section>
       </div>
     </>
   );

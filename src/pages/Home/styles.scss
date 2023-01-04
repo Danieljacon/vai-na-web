@@ -89,7 +89,7 @@
 .section-4 {
   width: 100%;
   max-width: #{map-get($breakpoints, "medium")};
-  padding: 48px 12px 0 12px;
+  padding: 48px 12px 58px 12px;
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -99,5 +99,45 @@
   > div:nth-child(2n) {
     background-color: $primary-color;
     color: $white-color;
+  }
+}
+
+.section-5 {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 74px;
+  padding-bottom: 74px;
+
+  h3 {
+    font-size: 2.1875rem;
+    font-weight: 800;
+    color: $white-color;
+  }
+
+
+  > form {
+    max-width: #{map-get($breakpoints, "small")};
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 12px;
+    gap: 7px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    > textarea {
+      min-height: 68px;
+      resize: vertical;
+    }
+
+    > .btn {
+      margin-top: 4px;
+    }
   }
 }
